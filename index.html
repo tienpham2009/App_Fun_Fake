@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let a = new Array(4);
+        let n = "";
+        let x;
+        let y;
+        a[1] = 'T';
+        a[2] = 'I';
+        a[3] = 'E';
+        a[4] = 'N';
+        a[5] = ' ';
+        a[6] = 'D';
+        a[7] = 'E';
+        a[8] = 'P';
+        a[9] = ' ';
+        a[10] = 'T';
+        a[11] = 'R';
+        a[12] = 'A';
+        a[13] = 'I';
+        a[14] = '';
+
+        function fake() {
+            x = document.t.txt.value;
+            y = x.length;
+            if (y > 0) {
+                for (let i = 1; i <= y; i++) {
+                    console.log(y)
+                    n = n + a[i];
+                    if (i === 14) {
+                        document.t.txt.value = "";
+                        n = "";
+                    }
+                }
+
+            }
+            document.t.txt.value = n;
+            n = "";
+            setTimeout(fake, 10);
+        }
+
+
+    </script>
+</head>
+<body>
+<form name="t">
+    <textarea name="txt" rows="10" cols="30" onkeydown="fake()"></textarea>
+</form>
+
+
+</body>
+</html>
